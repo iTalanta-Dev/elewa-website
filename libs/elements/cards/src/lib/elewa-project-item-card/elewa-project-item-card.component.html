@@ -1,4 +1,5 @@
 <div class="card-container">
+  <!-- use *ngFor to loop through the data input in highlightedProjects -->
   <div class="card" *ngFor="let project of highlightedProjects">
     <div class="card-image">
       <img
@@ -6,9 +7,10 @@
         ngSrcset="100w, 200w, 300w"
         sizes="(max-width: 480px) 100vw,
         (max-width: 768px) 50vw,
-        33.3vw"
+        33.3vw" 
         alt="{{ project.title }}"
       />
+      <!-- ngSrcset is the equivalent of HTML's srcsets -->
     </div>
     <div class="card-tag">
       <p class="card-tag-info">{{ project.tag }}</p>
