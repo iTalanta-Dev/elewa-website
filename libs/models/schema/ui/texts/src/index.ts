@@ -1,1 +1,1 @@
-export * from './lib/models-schema-ui-texts.module';
+export * from './lib/context-text.interface';
