@@ -8,7 +8,7 @@ import { ContentText } from '@elewa-website/models/schema/ui/texts'
 })
 export class ElewaTextContentItemComponent {
   /** Text info to be passed in */
-  @Input() context: ContentText = {
+  @Input() content: ContentText = {
     title: '',
     descriptions: [''],
   };
