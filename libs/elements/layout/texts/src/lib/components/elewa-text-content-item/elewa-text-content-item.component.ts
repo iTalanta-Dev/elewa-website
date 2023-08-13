@@ -1,8 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ContentText } from '@elewa-website/models/schema/ui/texts'
 
 @Component({
   selector: 'elewa-website-elewa-text-content-item',
   templateUrl: './elewa-text-content-item.component.html',
   styleUrls: ['./elewa-text-content-item.component.scss'],
 })
-export class ElewaTextContentItemComponent {}
+export class ElewaTextContentItemComponent {
+  /** Text info to be passed in */
+  @Input() context: ContentText = {
+    title: '',
+    descriptions: [''],
+  };
+}
