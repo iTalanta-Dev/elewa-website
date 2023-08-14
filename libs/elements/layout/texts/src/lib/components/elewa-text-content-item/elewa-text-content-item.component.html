@@ -1,5 +1,17 @@
-<div class="text-content-item">
-    <h2>{{ content.title }}</h2>
-    <p *ngFor="let description of content.descriptions">{{ description }}</p>
+<!-- <div class="text-content-item">
+  <h2>{{ content.title }}</h2>
+  <p *ngFor="let description of content.descriptions">{{ description }}</p>
+</div> -->
+
+<div class="frame">
+  <div class="div">
+    <h2 class="p">{{ content.title }}</h2>
+    <!-- <p class="p">
+      Getting thousands of people up to speed can be hard and expensive. But, it
+      doesn’t have to be.
+    </p> -->
+    <p class="text-wrapper" *ngFor="let description of content.descriptions">
+      {{ description }}
+    </p>
+  </div>
 </div>
-  
