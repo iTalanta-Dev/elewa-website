@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { InfoCard } from '@elewa-website/models/schema/ui/cards';
 
 @Component({
@@ -7,7 +7,7 @@ import { InfoCard } from '@elewa-website/models/schema/ui/cards';
   styleUrls: ['./consultancy-page.component.scss'],
 })
 export class ConsultancyPageComponent {
-  cardsData: InfoCard[] = [
+  @Input() cardsData: InfoCard[] = [
     {
       title: "Learning design thinking",
       description: "Redefine what learning means for your organisation. Our facilitators help you explore new ways to think about education in a practical manner.",
