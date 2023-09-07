@@ -1,0 +1,51 @@
+// Define the number of columns you want in the grid
+$columns: 4;
+
+// Define the gap between the cards
+$gap: 10px;
+
+// Define the width of each card
+$card-width: calc((100% - (#{$columns} - 1) * #{$gap}) / #{$columns});
+
+// Define the styles for the cards
+.card {
+  width: $card-width;
+  margin-bottom: $gap;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+
+
+  // Adjust any other styles for your cards here
+
+  &:nth-child(#{$columns}n) {
+    margin-right: 0;
+  }
+
+  // Define styles for larger screens (optional)
+  // @media (min-width: 768px) {
+  //   width: calc((100% - (#{$columns} - 1) * #{$gap}) / #{$columns});
+  // }
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 10px);
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+}
+
+.card-container {
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services-head {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}

@@ -1,3 +1,11 @@
-<div *ngFor="let card of cardsData">
-    <elewa-website-info-card [cardsData]="card"></elewa-website-info-card>
+<h1 class="services-head">
+  Our learning design <br />
+  services
+</h1>
+<div class="card-container">
+  <div class="card">
+    <div *ngFor="let card of cardsData">
+      <elewa-website-info-card [cardsData]="card"></elewa-website-info-card>
+    </div>
+  </div>
 </div>
